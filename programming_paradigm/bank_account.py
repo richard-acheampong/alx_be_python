@@ -35,6 +35,7 @@ class BankAccount:
         
 
     def display_balance(self):
-        print("Current Balance:" + "$" + format(self.account_balance, ".2f"))
+        print("Current Balance: $" + format(self.account_balance, ".2f"))
+
 
     
