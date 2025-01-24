@@ -29,27 +29,27 @@ class Library:
     def add_book(self, book):
         self.books.append(book)
 
-    # def list_books(self):
-    #     for book in self.books:
-    #         if isinstance(book, EBook):
-    #             print (book)
-    #         elif isinstance(book, PrintBook):
-    #             print (book)
-    #         elif isinstance(book, Book):
-    #             print (book)
-    #         else:
-    #             print("Unknown book type")
-
     def list_books(self):
         for book in self.books:
-            match book:
-                case EBook():
-                    print (book) # print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
-                case PrintBook():
-                    print (book) # print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
-                case Book():
-                    print (book) # print(f"Book: {book.title} by {book.author}")
-                case _:
-                    print("Unknown book type")
+            if isinstance(book, EBook):
+                print (book)
+            elif isinstance(book, PrintBook):
+                print (book)
+            elif isinstance(book, Book):
+                print (book)
+            else:
+                print("Unknown book type")
+
+    # def list_books(self):
+    #     for book in self.books:
+    #         match book:
+    #             case EBook():
+    #                 print (book) # print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
+    #             case PrintBook():
+    #                 print (book) # print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
+    #             case Book():
+    #                 print (book) # print(f"Book: {book.title} by {book.author}")
+    #             case _:
+    #                 print("Unknown book type")
     
     
