@@ -29,16 +29,16 @@ class Library:
     def add_book(self, book):
         self.books.append(book)
 
-    def list_books(self):
-        for book in self.books:
-            if isinstance(book, EBook):
-                print (book)
-            elif isinstance(book, PrintBook):
-                print (book)
-            elif isinstance(book, Book):
-                print (book)
-            else:
-                print("Unknown book type")
+    # def list_books(self):
+    #     for book in self.books:
+    #         if isinstance(book, EBook):
+    #             print (book)
+    #         elif isinstance(book, PrintBook):
+    #             print (book)
+    #         elif isinstance(book, Book):
+    #             print (book)
+    #         else:
+    #             print("Unknown book type")
 
     def list_books(self):
         for book in self.books:
